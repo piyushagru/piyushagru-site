@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/v4-shims.css">
+
+<!--
+Hope you guys will like it.
+Quick FAQ
+*I used the famous ParticleJS to fill some void space.
+It was just an experiment and I think it worked out pretty well with the slideshow.
+*I used photoshop to create the intro label and the education mountain.
+*I also used the sticky notes and I reconstructed them so they can be viewed as a postcard.
+
+Thank you guys for providing me with this wonderful oppurtunity.
+@piyushagru
+-->
+
+<head>
+  <title>Portfolio Piyush</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Segoe UI;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="home"></h1>
+  <img src="assets/welcome.jpg " style="width:100%">
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js "></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json',
+      function() {
+        console.log('particles.json loaded...')
+      })
+  </script>
+
+  <!--NAVBAR START-->
+  <div id="navbar">
+    <a class="active" href="#home">
+      <font color="#070942"><b>[piyushagru]</b></font>
+    </a>
+
+    <div class="topnav-right">
+      <a href="#about"><b>About</b></a>
+      <a href="#work"><b>Work</b></a>
+      <a href="#contact"><b>Contact</b></a>
+    </div>
+  </div>
+
+  <!--STICKY NAVBAR SCRIPT START-->
+  <script>
+    window.onscroll = function() {
+      myFunction()
+    };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+  <!--STICKY NAVBAR SCRIPT END-->
+  <!--NAVBAR end-->
+
+  <div id="particles-js">
+
+    <!--ABOUT ME START-->
+    <hr class="style12">
+    <div class="side ">
+      <h2 id="about">ABOUT</h2>
+      <h3>I'm Piyush Aggarwal, 1st year student at Thapar University. I love playing Football and Badminton. I am very enthusiast about cyber security and competitive coding. I live in Noida, Uttar Pradesh. I like to watch Anime and TV series. My favourite anime so far is Tokyo Ghoul and I just jove Big Bang Theory, it's so good! Sometimes I also enjoy making quick line sketches while having a nice bowl full of my favourite Ice-cream. I do things which amuses me and I keep on moving with the flow of life ◉‿◉.<br>  </h3>
+    </div>
+    <!--ABOUT ME END-->
+
+  </div>
+
+  <!--PHOTO assets/gallery START-->
+  <br>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="assets/gallery-one/cpy (1).jpg" style="width:50%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="assets/gallery-one/cpy (2).jpg" style="width:50%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="assets/gallery-one/cpy (3).jpg" style="width:50%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 5</div>
+      <img src="assets/gallery-one/cpy (4).jpg" style="width:50%">
+
+    </div>
+
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 5</div>
+      <img src="assets/gallery-one/cpy (5).jpg" style="width:50%">
+
+    </div>
+
+
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; ++i) {
+        slides[i].style.display = "none";
+      }
+      var k;
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      var j;
+      for (i = 0; i < dots.length; ++i) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      var l;
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2200);
+    }
+  </script>
+  <!--PHOTO assets/gallery END-->
+
+
+  <hr class="style12">
+  <!--WORK STart-->
+  <div class="side ">
+    <h2 id="work">WORK</h2>
+    <h3>I’ve been lucky enough to work on some pretty cool projects, including academic projects and projects given by college communities and societies. <br>  </h3>
+  </div>
+  <!--STICKY NOTES START-->
+  <div class="side">
+    <ul>
+      <li>
+        <a href="#work">
+          <h2>ELECTRIC FIELD DETECTOR</h2>
+          <img src="assets/gallery-two/pro(1).png" style="width:90%">
+          <p>It detects nearby electric leakages. Major application in preventing electric shock due to current leakage in water stream from taps.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#work">
+          <h2>VIRTUAL CIRCUITS DESIGN</h2>
+          <img src="assets/gallery-two/pro(2).png" style="width:90%">
+          <p>These circuits were made using software NI-MULTISIM, it enabled us to reproduce many electronic circuits. Hence we were able to run simulations on it.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#work">
+          <center>
+            <h2>DC MOTOR</h2>
+            <img src="assets/gallery-two/pro(4).png" style="width:95%"></center>
+          <p>We created a prototype of a DC Motor which converts electrical energy to mechanical energy.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#work">
+          <center>
+            <h2>MANGONEL BUILDING</h2>
+            <img src="assets/gallery-two/pro(3).jpg" style="width:65%"></center>
+          <p>We designed a mangonel which could throw projectiles to more than 60m. We measured it's throw angle and launching speed using ARDUINO arrangement.</p>
+        </a>
+      </li>
+      <li>
+        <a href="#work">
+          <center>
+            <h2>EVENT ORGANISER</h2>
+            <img src="assets/gallery-two/pro(5).jpg" style="width:45%"></center>
+          <p>Under the society OWASP we organised CTF competition. With the help of my senior Himanshu Bansal I leaded the team and was assigned with the task of making the CTF questions. </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!--STICKY NOTES END-->
+
+  <!--WORK END-->
+  <br>
+  <hr class="style12">
+  <br>
+
+
+  <!--education STart-->
+  <div class="side ">
+    <h2 id="edu">EDUCATION</h2>
+    <br>
+    <div class="edu">
+      <img src="assets/edu_timeline.jpg" width="100%"></div>
+  </div>
+  <!--education ends-->
+
+  <br>
+  <hr class="style12">
+  <br>
+
+  <!--My College societies start-->
+  <div class="side ">
+    <h2 id="soc">My College Societies</h2>
+    <h3>It has been a great chance for me to work with some of the amazing societies and communities of the college. With their support I was able to learn many new things that I was earlier unaware of. It's has been a position of great responsibility for me to be a part of such amazing societies. I plan to join many other societies so to learn many more things.  <br>  </h3>
+  </div>
+
+  <!--IMAGE assets/gallery TYPE 2 start-->
+  <br>
+  <div class="gallery">
+    <a href="https://www.facebook.com/owasptsc/">
+    <img src="assets/gallery-three/soc(1).png" alt="OWASP" width="600" height="400">
+  </a>
+    <div class="desc">Technical Team Member</div>
+  </div>
+  <div class="gallery">
+    <a href="https://www.facebook.com/saturnalia.thapar/">
+    <img src="assets/gallery-three/soc(2).jpg" alt="SATURNALIA'18" width="600" height="400">
+  </a>
+    <div class="desc">Technical Team Member</div>
+  </div>
+  <div class="gallery">
+    <a href="https://www.msctiet.co.in/community/secom/">
+    <img src="assets/gallery-three/soc(3).png" alt="Security Community" width="600" height="400">
+  </a>
+    <div class="desc">Executive Member</div>
+  </div>
+
+  <!--IMAGE assets/gallery TYPE 2 end-->
+  <!--My College societies ends-->
+  <br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br>
+  <hr class="style12">
+
+  <!--extra activities start-->
+  <div class="side ">
+    <br>
+    <h2 id="extra">THINGS OF INTEREST</h2>
+    <h3>Their are many more things that I like to do in my leisure time. For instance I like to do sketching although I am not at all good at it but I still I love it. In college we used to play games on LAN for straight 3 hours. I also like to attend seminars, workshops and event organised by the college. For sports I love to play football and badminton, sometimes I go out to play pool with my friends. Nevertheless I enjoy every moment of my life.<br>  </h3>
+    <br>
+
+    <!--photo grid start-->
+    <h3>Some of my Sketches</h3>
+    <div class="row">
+      <div class="column">
+        <a href="assets/gallery-four/skt (1).jpg">  <img src="assets/gallery-four/skt (1).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/skt (2).jpg"><img src="assets/gallery-four/skt (2).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/skt (3).jpg"><img src="assets/gallery-four/skt (3).jpg" style="width:100%"></a>
+      </div>
+      <div class="column">
+        <a href="assets/gallery-four/skt (4).jpg"><img src="assets/gallery-four/skt (4).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/skt (5).jpg"><img src="assets/gallery-four/skt (5).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/skt (6).jpg"><img src="assets/gallery-four/skt (6).jpg" style="width:100%"></a>
+      </div>
+      <div class="column">
+        <a href="assets/gallery-four/skt (6).jpg"><img src="assets/gallery-four/skt (7).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/skt (6).jpg"><img src="assets/gallery-four/skt (8).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/skt (6).jpg"><img src="assets/gallery-four/skt (9).jpg" style="width:100%"></a>
+      </div>
+      <div class="column">
+        <a href="assets/gallery-four/skt (6).jpg"><img src="assets/gallery-four/skt (10).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/skt (6).jpg"><img src="assets/gallery-four/skt (11).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/skt (6).jpg"><img src="assets/gallery-four/skt (12).jpg" style="width:100%"></a>
+      </div>
+    </div>
+    <!--sketch photo grid ends-->
+
+    <h3>Some stills from events at my college</h3>
+    <div class="row">
+      <div class="column">
+        <a href="assets/gallery-four/roll (1).jpg"><img src="assets/gallery-four/roll (1).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (1).jpg"><img src="assets/gallery-four/roll (3).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (4).jpg"><img src="assets/gallery-four/roll (4).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (7).jpg"><img src="assets/gallery-four/roll (7).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (14).jpg"><img src="assets/gallery-four/roll (14).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/cer (1).jpg"><img src="assets/gallery-four/cer (1).jpg"" style="width:100%"></a>
+      </div>
+      <div class="column">
+        <a href="assets/gallery-four/roll (5).jpg"><img src="assets/gallery-four/roll (5).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (6).jpg"><img src="assets/gallery-four/roll (6).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/cer (2).jpg"><img src="assets/gallery-four/cer (2).jpg"" style="width:100%"></a>
+      </div>
+      <div class="column">
+        <a href="assets/gallery-four/roll (9).jpg"><img src="assets/gallery-four/roll (9).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (13).jpg"><img src="assets/gallery-four/roll (13).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (17).jpg"><img src="assets/gallery-four/roll (17).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/extra (16).jpg"><img src="assets/gallery-four/extra (16).jpg" style="width:100%"></a>
+      </div>
+      <div class="column">
+        <a href="assets/gallery-four/roll (8).jpg"><img src="assets/gallery-four/roll (8).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (11).jpg"><img src="assets/gallery-four/roll (11).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (12).jpg"><img src="assets/gallery-four/roll (12).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/roll (10).jpg"><img src="assets/gallery-four/roll (10).jpg" style="width:100%"></a>
+        <a href="assets/gallery-four/cer (3).jpg"><img src="assets/gallery-four/cer (3).jpg"" style="width:100%"></a>
+      </div>
+    </div>
+    <!-- event photo grid ends-->
+    <!--extra activities end-->
+    <br><br>
+  </div>
+
+  <!--FOOTER CONTACT start-->
+  <br>
+  <h2 id="contact"></h2>
+  <footer class="footer">
+    <div class="foot">
+      <div class="flex">
+        <div class="line"></div>
+        <h3 class="footer-sub title">Contact</h3>
+        <div class="line"></div>
+      </div><br>
+      <font face="Penna" size="6"><b>You have to dream before your dreams can come true.
+        <!---->
+      <br></b></font>
+      <font face="RofiTaste" size="7" color="#104294"><b>Piyush Aggarwal</font><br>
+        <div class="social inline">
+          <font color="#104294">Wanna talk. Feel free to come at my location.</font><br><a href="https://www.google.co.in/maps/place/28°36'14.0%22N+77°20'35.2%22E/@28.603894,77.343118,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d28.603894!4d77.343118">
+            <i class="fas fa-map-marker-alt fa-2x"></i></a> </div ><font color="#104294">+91-8178855175<br>
+            <a href="mailto:piyushnoida14@gmail.com?Subject=Hello" target="_top">piyushnoida14@gmail.com</a></font>
+
+        <!-- footer logo start-->
+        <br><br>
+        <a href="https://www.facebook.com/piyushnoida"><img src="assets/logo/fb-icon.jpg"  style="width:5%"></a>
+        <a href="https://www.instagram.com/piyushagru/"><img src="assets/logo/insta-icon.png" style="width:5%"></a>
+        <a href="https://github.com/piyushagru"><img src="assets/logo/github-icon.png" style="width:5%"></a>
+        <a href="https://ctftime.org/team/57226"><img src="assets/logo/ctftime-icon.png" style="width:5%"></a>
+        <!-- footer logo end-->
+      </div>
+    </footer>
+    <!--FOOTER CONTACT end-->
+</body>
+</html>
